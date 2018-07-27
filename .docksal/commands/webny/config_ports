@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+## Setup Custom Ports
+##
+## Usage: fin custom_ports
+##
+# Setup custom ports if they don't exist
+if ! grep -q "DOCKSAL_VHOST_PROXY_PORT_HTTP" ~/.docksal/docksal.env; then
+  echo "
+  DOCKSAL_VHOST_PROXY_PORT_HTTP=8080
+  DOCKSAL_VHOST_PROXY_PORT_HTTPS=8443
+  " >>  ~/.docksal/docksal.env
+fi

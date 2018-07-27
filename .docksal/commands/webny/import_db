@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+## Import a custom cert
+##
+## Usage: fin init
+##
+
+# Abort if anything fails
+set –e
+
+# Environment variables passed from fin:
+#
+#   $PROJECT_ROOT - (string) absolute path to NEAREST .docksal folder
+#   $VIRTUAL_HOST - (string) ex. projectname.docksal
+#   $DOCROOT - name of the docroot folder
+#   $DOCKER_RUNNING - (string) "true" or "false"
+
+if [[ ! -f ./db/db.sql ]]; then
+    echo "Please add your your database dump to db/db.sql!"
+fi
+
+cd ${DOCROOT_PATH}
+# import the existing database
+echo "Dropping database..."
+fin exec -T drush sql-drop -y
+echo "Importing database from db/db.sql";
+fin db import ./db/db.sql --progress --no-truncate

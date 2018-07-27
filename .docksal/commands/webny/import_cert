@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+## Import a custom cert
+##
+## Usage: fin init
+##
+
+# Abort if anything fails
+set –e
+
+# Environment variables passed from fin:
+#
+#   $PROJECT_ROOT - (string) absolute path to NEAREST .docksal folder
+#   $VIRTUAL_HOST - (string) ex. projectname.docksal
+#   $DOCROOT - name of the docroot folder
+#   $DOCKER_RUNNING - (string) "true" or "false"
+
+if [[ ! -f /etc/pki/ca-trust/source/anchors/itsprivateroot.cer ]]; then
+    echo "Please export and copy the `itsprivateroot.cer` to the `/etc/pki/ca-trust/source/anchors/` directory!"
+fi
+
+# setup .wgetrc to use the custom cert
+mkdir -p .docksal/etc/openssl && cp /etc/pki/ca-trust/source/anchors/itsprivateroot.cer .docksal/etc/openssl/
+fin exec -T "echo 'ca_directory=/var/www/.docksal/etc/openssl' >~/.wgetrc"
+
+echo "Successfully imported custom cert"
