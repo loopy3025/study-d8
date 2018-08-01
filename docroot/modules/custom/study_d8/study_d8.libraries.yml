@@ -1,0 +1,12 @@
+drupal.study_d8:
+  version: 8.x.1
+  js:
+    js/study_d8.js: {}
+  css:
+    theme:
+      css/study_d8.css: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.ui
+    - core/jquery.ui.draggable
+    - core/drupal

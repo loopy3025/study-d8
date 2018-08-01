@@ -1,0 +1,49 @@
+<?php
+
+/**
+ * @file
+ * Allow users to specify a focal point on content images.
+ *
+ * @todo add support for default foal point value calculation method.
+ * @todo add test drive functionality?
+ */
+
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Entity\FieldableEntityInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function study_d8_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    case 'help.page.study_d8':
+      $output = '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t("This is the module Adam is using to learn Drupal 8. It includes several examples that may or may not make a whole lot of sense. Use at your own risk.") . '</p>';
+      return $output;
+  }
+}
+
+/**
+ * Process variables for paragraphs-items.tpl.php
+function study_d8_preprocess_paragraphs_items(&$variables) {
+  $variables['theme_hook_suggestions'][] = 'paragraphs_items__' . $variables['element']['#view_mode'];
+}
+ */
+/**
+ * Process variables for paragraphs-items.tpl.php
+
+function YOURTHEMEORMODULE_preprocess_paragraphs_items(&$variables) {
+  $variables['theme_hook_suggestions'][] = 'paragraphs_items__' . $variables['element']['#view_mode'];
+}
+
+
+function study_d8_theme_registry_alter ( &$theme_registry ) {
+	$theme_registry['paragraphs_item__card'] = [
+		'template' => 'paragraphs-item--card',
+		'path' => drupal_get_path('module', 'study_d8') . '/templates',
+		'type' => 'paragraphs-item'
+	];
+}
+ */
