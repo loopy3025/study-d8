@@ -1,16 +1,5 @@
 <?php
 
-/**
- * @file
- * Allow users to specify a focal point on content images.
- *
- * @todo add support for default foal point value calculation method.
- * @todo add test drive functionality?
- */
-
-use Drupal\Core\Entity\EntityInterface;
-use Drupal\Core\Entity\FieldableEntityInterface;
-use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Routing\RouteMatchInterface;
 
 /**
@@ -24,7 +13,20 @@ function study_d8_help($route_name, RouteMatchInterface $route_match) {
       return $output;
   }
 }
-
+/**
+ * Implements hook_theme().
+ */
+function study_d8_theme() {
+  $theme['page__study_d8'] = [
+    'template' => 'page--study_d8',
+    'base hook' => 'node',
+  ];
+  $theme['paragraph__card__study_d8'] = [
+    'template' => 'paragraph--card--study_d8',
+    'base hook' => 'paragraph',
+  ];
+  return $theme;
+}
 /**
  * Process variables for paragraphs-items.tpl.php
 function study_d8_preprocess_paragraphs_items(&$variables) {
