@@ -13,9 +13,46 @@ function study_d8_help($route_name, RouteMatchInterface $route_match) {
       return $output;
   }
 }
+function study_d8_preprocess(&$variables, $hook, &$info) {
+  if ($hook == 'node') {
+    $contentTypeToShow = $variables['node']->bundle();
+    if ($contentTypeToShow == 'article') {
+      $templateFileName = 'node--article';
+      $templateFilePath = drupal_get_path('module', 'study_d8') . '/templates/' . $templateFileName . '.html.twig';
+      if (file_exists($templateFilePath)) {
+        $info['theme path'] = drupal_get_path('module', 'study_d8');
+        $info['path'] = drupal_get_path('module', 'study_d8') . '/templates';
+        $info['template'] = $templateFileName;
+      }
+    }
+  }
+}
+
+
+
+/*
+ * Implements hook_theme()
+
+function study_d8_theme() {
+  $items = [
+    'page' => [],
+  ];
+  return $items;
+}
+*
+*/
+/**
+function study_d8_theme($existing, $type, $theme, $path) {
+  return [
+    'page__study_d8' => [
+      
+    ],
+  ];
+}
+
 /**
  * Implements hook_theme().
- */
+
 function study_d8_theme() {
   $theme['page__study_d8'] = [
     'template' => 'page--study_d8',
@@ -27,6 +64,7 @@ function study_d8_theme() {
   ];
   return $theme;
 }
+ */
 /**
  * Process variables for paragraphs-items.tpl.php
 function study_d8_preprocess_paragraphs_items(&$variables) {

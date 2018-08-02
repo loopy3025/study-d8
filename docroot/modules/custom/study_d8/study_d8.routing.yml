@@ -1,0 +1,5 @@
+#study_d8.theme_registry:
+#  path: '/devel/theme/registry'
+#  defaults:
+#    _controller: '\Drupal\study_d8\Controller\DevelController::themeRegistry'
+#    _title: 'Theme registry'
