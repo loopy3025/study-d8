@@ -7,6 +7,7 @@ dependencies:
     - field.field.paragraph.card.field_card_link
     - field.field.paragraph.card.field_card_text
     - field.field.paragraph.card.field_card_title
+    - field.field.paragraph.card.field_series
     - image.style.thumbnail
     - paragraphs.paragraphs_type.card
   module:
@@ -49,6 +50,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_series:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
     region: content
 hidden:
   created: true

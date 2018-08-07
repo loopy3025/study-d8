@@ -49,10 +49,11 @@ function study_d8_preprocess(&$variables, $hook, &$info) {
     $thisFieldType = $variables['element']['#field_name'];
     if ($thisFieldType == 'field_cards') {
       $templateFileName = 'field--node--field-cards--page';
+    } elseif ($thisFieldType == 'field_series') {
+      $templateFileName = 'field--paragraph--field-series--card';
     }
   }
   // we could keep adding conditions for every object in the request if we so desired.
-
   // now, for this specific object, we will tell it to use a template from our templates 
   // folder using the variable we declared for that purpose
   if ($templateFileName != '') {

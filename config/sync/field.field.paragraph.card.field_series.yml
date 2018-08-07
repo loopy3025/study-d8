@@ -1,0 +1,29 @@
+uuid: 924edc70-6c6c-467c-8329-56d5096093dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_series
+    - paragraphs.paragraphs_type.card
+    - taxonomy.vocabulary.science_fiction_shows
+id: paragraph.card.field_series
+field_name: field_series
+entity_type: paragraph
+bundle: card
+label: Series
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      science_fiction_shows: science_fiction_shows
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

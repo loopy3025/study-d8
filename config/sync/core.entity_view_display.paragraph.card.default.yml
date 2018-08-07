@@ -7,6 +7,7 @@ dependencies:
     - field.field.paragraph.card.field_card_link
     - field.field.paragraph.card.field_card_text
     - field.field.paragraph.card.field_card_title
+    - field.field.paragraph.card.field_series
     - image.style.card
     - paragraphs.paragraphs_type.card
   module:
@@ -20,7 +21,7 @@ mode: default
 content:
   field_card_image:
     weight: 1
-    label: above
+    label: hidden
     settings:
       image_style: card
       image_link: ''
@@ -29,7 +30,7 @@ content:
     region: content
   field_card_link:
     weight: 3
-    label: above
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
@@ -41,17 +42,25 @@ content:
     region: content
   field_card_text:
     weight: 2
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_card_title:
     weight: 0
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
+  field_series:
+    weight: 4
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
     region: content
 hidden: {  }
