@@ -65,7 +65,7 @@
         {% if counter == 0 %}
           {% set comma = '' %}
         {% endif %}
-        <li {{ item.attributes.addClass('show') }}>{{ counter }} {{ item.content }}{{ comma }}</li>
+        <li {{ item.attributes.addClass('show') }}>{{ item.content }}{{ comma }}</li>
       {% endfor %}
     </ul>
   </div>
