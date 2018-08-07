@@ -8,6 +8,12 @@
   vertical-align: top;
   height: 750px;
 }
-.card .series ul, .card .series li {
-  list-style: disc;
+.card h6, .card ul.series, .card ul li.tv-show {
+  display: inline;
+  padding: 0px;
+  margin: 0px;
+  font-size: 14px;
+}
+.card h6 {
+	font-weight: bold;
 }

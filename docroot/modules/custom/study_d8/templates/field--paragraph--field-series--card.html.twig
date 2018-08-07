@@ -53,7 +53,7 @@
   ]
 %}
   <div{{ attributes.addClass(classes) }}>
-    <h4>This ship appears in:</h4>
+    <h6>This ship appears in:</h6>
 {% if not label_hidden %}
   <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
 {% endif %}
@@ -65,7 +65,7 @@
         {% if counter == 0 %}
           {% set comma = '' %}
         {% endif %}
-        <li {{ item.attributes.addClass('show') }}>{{ item.content }}{{ comma }}</li>
+        <li {{ item.attributes.addClass('tv-show') }}>{{ item.content }}{{ comma }}</li>
       {% endfor %}
     </ul>
   </div>
