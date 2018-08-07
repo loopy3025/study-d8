@@ -1,13 +1,9 @@
 name: Study d8
 type: module
 description: 'Adam is learning Drupal 8 from the ground up.'
-# core: 8.x
-package: Studying Drupal 8
-# configure: entity.study_d8_type.collection
 
-dependencies:
-  - 'drupal:system (>= 8.5)'
-  - 'paragraphs'
+libraries:
+  - study_d8/global-css
 
 version: '8.x-1.0-alpha1'
 core: '8.x'

@@ -14,17 +14,62 @@ function study_d8_help($route_name, RouteMatchInterface $route_match) {
   }
 }
 function study_d8_preprocess(&$variables, $hook, &$info) {
+  // Declaring an empty variable that I have to use sometimes. I'm sure this is somewhat
+  // inappropriate, but c'est la vie
+  $templateFileName = '';
+  // The $hook is the variable that is used by drupal to figure out what kind of object 
+  // we're iterating through in our http request. This might be a comment, a field, a 
+  // block, a form item... anything you can think of that you may want to theme. The 
+  // interesting thing is these objects might be nested in your site, but they are 
+  // treated as unrelated entities as far as this preprocess code is concerned. For this
+  // one, we'll assign a template to each of the node types we want to create a unique 
+  // template for
   if ($hook == 'node') {
-    $contentTypeToShow = $variables['node']->bundle();
-    if ($contentTypeToShow == 'article') {
+    // bundle is the name that we gave the object we're iterating through ... it is a 
+    // universal property used for of all these things
+    $thisContentType = $variables['node']->bundle();
+    // now we can test by that object's type. This could be a long list of if/elseif, 
+    // each one specifying a differrent template file.
+    if ($thisContentType == 'article') {
       $templateFileName = 'node--article';
-      $templateFilePath = drupal_get_path('module', 'study_d8') . '/templates/' . $templateFileName . '.html.twig';
-      if (file_exists($templateFilePath)) {
-        $info['theme path'] = drupal_get_path('module', 'study_d8');
-        $info['path'] = drupal_get_path('module', 'study_d8') . '/templates';
-        $info['template'] = $templateFileName;
-      }
+    } elseif ($thisContentType == 'office') {
+      $templateFileName = 'node--office';
+    }
+  // you can do an elseif hook for any kind of object that might be referenced in the 
+  // http request for this condition, we'll set all the specific paragraph templates we 
+  // have need for.
+  } elseif ($hook == 'paragraph') {    
+    $thisParagraphType = $variables['paragraph']->bundle();
+    if ($thisParagraphType == 'card') {
+      $templateFileName = 'paragraph--card';
+    } elseif ($thisParagraphType == 'alert') {
+      $templateFileName = 'paragraph--alert';
+    }
+  } elseif ($hook == 'field') {   
+    $thisFieldType = $variables['element']['#field_name'];
+    if ($thisFieldType == 'field_cards') {
+      $templateFileName = 'field--node--field-cards--page';
     }
   }
+  // we could keep adding conditions for every object in the request if we so desired.
+
+  // now, for this specific object, we will tell it to use a template from our templates 
+  // folder using the variable we declared for that purpose
+  if ($templateFileName != '') {
+    $templateFilePath = drupal_get_path('module', 'study_d8') . '/templates/' . $templateFileName . '.html.twig';
+    if (file_exists($templateFilePath)) {
+      $info['theme path'] = drupal_get_path('module', 'study_d8');
+      $info['path'] = drupal_get_path('module', 'study_d8') . '/templates';
+      $info['template'] = $templateFileName;
+    }
+  }  
+}
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function study_d8_page_attachments_alter(array &$page) {
+  // Attaches css assets globally.
+  $page['#attached']['library'][] = 'study_d8/global-css';
 }
 
