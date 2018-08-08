@@ -1,0 +1,17 @@
+.path-frontpage h1 {
+  display: none;
+}
+.story-cards .views-row {
+  width: calc(33% - 10px);
+  width: 33%;
+  margin-right: 10px;
+  display: inline-block;
+}
+.field--name-body {
+  background-image: url('images/text-bg.png');
+  background-repeat: repeat-y;
+  background-size: 100% auto;
+}
+body {
+  background-color: #f00!important;
+}

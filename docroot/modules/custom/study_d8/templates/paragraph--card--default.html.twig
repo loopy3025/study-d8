@@ -1,0 +1,9 @@
+{#% extends directory ~ '/templates/paragraph--card.html.twig' %#}
+{% extends 'modules/custom/study_d8/templates/paragraph--card.html.twig' %}
+{% block cardinterior %}    
+  {{ content.field_card_image }}
+  {{ content.field_card_text }}
+  {{ content.field_card_link }}
+  {{ content.field_series }}
+  {{ content.field_additional_ }}                
+{% endblock %}

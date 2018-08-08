@@ -41,7 +41,7 @@ function study_d8_preprocess(&$variables, $hook, &$info) {
   } elseif ($hook == 'paragraph') {    
     $thisParagraphType = $variables['paragraph']->bundle();
     if ($thisParagraphType == 'card') {
-      $templateFileName = 'paragraph--card';
+      $templateFileName = 'paragraph--card--default';
     } elseif ($thisParagraphType == 'alert') {
       $templateFileName = 'paragraph--alert';
     }

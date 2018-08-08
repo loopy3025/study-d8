@@ -1,0 +1,283 @@
+/* line 5, ../../../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../Ruby25-x64/lib/ruby/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 1, ../sass/_layout.scss */
+body {
+  background-image: url("images/text-bg.png");
+  background-repeat: repeat-y;
+  background-size: 100% auto;
+}
+
+/* line 6, ../sass/_layout.scss */
+.navbar-default, .navbar-nav, .block-views-blockstories-story-cards, .path-frontpage .content .field--name-body, .region-content {
+  border: 1px solid #444444;
+  background-color: rgba(255, 255, 255, 0.72);
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 0px;
+}
+
+/* line 13, ../sass/_layout.scss */
+.region-content {
+  padding: 10px 20px 30px 20px;
+}
+
+/* line 16, ../sass/_layout.scss */
+.path-frontpage .region-content {
+  border: 0px;
+  padding: 0px;
+  background-color: none;
+}
+/* line 20, ../sass/_layout.scss */
+.path-frontpage .region-content .field--name-body {
+  margin-top: 0px;
+}
+
+/* line 25, ../sass/_layout.scss */
+.story-cards h2 {
+  padding-left: 0px;
+}
+/* line 28, ../sass/_layout.scss */
+.story-cards .views-field-field-teaser-image {
+  padding: 10px;
+}
+/* line 30, ../sass/_layout.scss */
+.story-cards .views-field-field-teaser-image img {
+  border: 1px solid #444444;
+}
+/* line 34, ../sass/_layout.scss */
+.story-cards .block-title {
+  padding-top: 0px;
+}
+/* line 37, ../sass/_layout.scss */
+.story-cards .views-row {
+  width: calc(33% - $standard-margin);
+  width: 33%;
+  margin-right: 10px;
+  display: inline-block;
+}
+/* line 42, ../sass/_layout.scss */
+.story-cards .views-row .views-field-view-node {
+  text-align: right;
+  padding: 10px;
+}
+
+/* line 48, ../sass/_layout.scss */
+.content .field--name-body {
+  margin-top: 10px;
+}
+
+/* line 53, ../sass/_layout.scss */
+.page-node-type-character .field--name-field-portrait {
+  width: 33%;
+  float: left;
+  margin: 0px 20px 10px 0px;
+  border: 2px solid #444444;
+}
+
+/* line 62, ../sass/_layout.scss */
+.story-page h1.page-header {
+  padding-left: 0px;
+}
+/* line 65, ../sass/_layout.scss */
+.story-page .views-row {
+  margin: 10px;
+}
+
+/* line 71, ../sass/_layout.scss */
+.story-page .teaser-image-wrapper, .story-page .teaser-text-wrapper, .page-node-type-story .teaser-image-wrapper, .page-node-type-story .teaser-text-wrapper {
+  display: table-cell;
+  vertical-align: top;
+}
+/* line 74, ../sass/_layout.scss */
+.story-page .teaser-image-wrapper img, .story-page .teaser-text-wrapper img, .page-node-type-story .teaser-image-wrapper img, .page-node-type-story .teaser-text-wrapper img {
+  border: 1px solid #444444;
+}
+/* line 78, ../sass/_layout.scss */
+.story-page .teaser-image-wrapper, .page-node-type-story .teaser-image-wrapper {
+  width: 100px;
+}
+/* line 81, ../sass/_layout.scss */
+.story-page .teaser-text-wrapper, .page-node-type-story .teaser-text-wrapper {
+  padding-left: 10px;
+}
+/* line 84, ../sass/_layout.scss */
+.story-page .view-characters .views-row, .page-node-type-story .view-characters .views-row {
+  margin: 10px;
+}
+
+/* line 90, ../sass/_layout.scss */
+.page-node-type-story .field--name-field-teaser-image {
+  border: 2px solid #444444;
+  margin: 0px 10px 20px 10px;
+}
+/* line 94, ../sass/_layout.scss */
+.page-node-type-story .field--name-field-realms-involved {
+  display: block;
+}
+/* line 96, ../sass/_layout.scss */
+.page-node-type-story .field--name-field-realms-involved div {
+  display: inline-block;
+  float: none;
+}
+
+/* line 1, ../sass/_header.scss */
+header.navbar-default {
+  margin-top: 20px;
+}
+
+/* line 4, ../sass/_header.scss */
+.region-header, .navbar-menu, .navbar-nav {
+  width: 100%;
+}
+/* line 6, ../sass/_header.scss */
+.region-header li, .navbar-menu li, .navbar-nav li {
+  text-transform: uppercase;
+  font-size: 1.3em;
+}
+
+/* line 1, ../sass/_content.scss */
+body {
+  font-size: 16px;
+  line-height: 18px;
+  font-family: georgia, sans-serif;
+}
+
+/* line 6, ../sass/_content.scss */
+h1, h1.page-header, h2 {
+  font-size: 1.65em;
+  letter-spacing: .2em;
+}
+
+/* line 10, ../sass/_content.scss */
+h3 {
+  font-size: 1.4em;
+  letter-spacing: .1em;
+}
+
+/* line 14, ../sass/_content.scss */
+h4 {
+  font-size: 1.2em;
+  letter-spacing: .1em;
+}
+
+/* line 18, ../sass/_content.scss */
+h5 {
+  font-size: 1.13em;
+  letter-spacing: .1em;
+}
+
+/* line 22, ../sass/_content.scss */
+p, li, h6 {
+  font-size: 1em;
+  padding: 5px 10px;
+}
+
+/* line 26, ../sass/_content.scss */
+h1, h2, h3, h4, h5, h6, .navbar-nav li {
+  font-weight: bold;
+  padding: 10px;
+  font-family: verdana, serif;
+}
+
+/* line 31, ../sass/_content.scss */
+.path-frontpage h1 {
+  display: none;
+}
+
+/* line 34, ../sass/_content.scss */
+.field--name-field-stories, .field--name-field-realms, .field--name-field-realms-involved, .field--name-field-character-traits {
+  display: block;
+  margin: 10px;
+}
+/* line 37, ../sass/_content.scss */
+.field--name-field-stories div, .field--name-field-stories div.field--label-inline div.field--label, .field--name-field-realms div, .field--name-field-realms div.field--label-inline div.field--label, .field--name-field-realms-involved div, .field--name-field-realms-involved div.field--label-inline div.field--label, .field--name-field-character-traits div, .field--name-field-character-traits div.field--label-inline div.field--label {
+  display: inline-block;
+  float: none;
+}
+/* line 41, ../sass/_content.scss */
+.field--name-field-stories div.field--label, .field--name-field-realms div.field--label, .field--name-field-realms-involved div.field--label, .field--name-field-character-traits div.field--label {
+  margin-right: 20px;
+}
+/* line 44, ../sass/_content.scss */
+.field--name-field-stories div.field--item, .field--name-field-realms div.field--item, .field--name-field-realms-involved div.field--item, .field--name-field-character-traits div.field--item {
+  margin-right: 10px;
+}
+
+/* line 48, ../sass/_content.scss */
+.page-node-type-character .block-title {
+  margin-top: 20px;
+}
+
+/* line 51, ../sass/_content.scss */
+.region-content h1.page-header {
+  border-bottom: 0px;
+  margin-top: 20px;
+}
+
+/* line 1, ../sass/_footer.scss */
+.footer {
+  border-top: 0px;
+}

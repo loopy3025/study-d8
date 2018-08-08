@@ -52,10 +52,14 @@
         <h3>    
           {{ content.field_card_title }}
         </h3>
-        {{ content.field_card_image }}
-        {{ content.field_card_text }}
-        {{ content.field_card_link }}
-        {{ content.field_series }}        
+        <div class="card-interior">
+          {% block cardinterior %}
+            {{ content.field_card_image }}
+            {{ content.field_card_text }}
+            {{ content.field_card_link }}
+            {{ content.field_series }}        
+          {% endblock %}  
+        </div>
       {% endblock %}
     </div>
   {% endblock paragraph %}
