@@ -1,0 +1,11 @@
+uuid: 8d4ad186-f92f-4718-8fc3-49e44f989fbf
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'file:file:81571967-bed6-4914-8be1-41beb4a9dfcb'
+id: card
+label: Card
+icon_uuid: 81571967-bed6-4914-8be1-41beb4a9dfcb
+description: ''
+behavior_plugins: {  }

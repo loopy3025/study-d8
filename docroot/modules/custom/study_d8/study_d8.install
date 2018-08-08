@@ -1,0 +1,22 @@
+<?php
+/**
+ * @file
+ * Installation hooks for study_d8 module.
+ */
+
+use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\Core\Field\BaseFieldDefinition;
+use Drupal\field\Entity\FieldStorageConfig;
+use Drupal\paragraphs\ParagraphStorageSchema;
+
+/**
+ * Implements hook_install().
+ */
+function study_d8_install() {
+  
+  
+}
+
+function study_d8_update_8102() {
+ 
+}

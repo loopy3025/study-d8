@@ -5,6 +5,12 @@ description: 'Adam is learning Drupal 8 from the ground up.'
 libraries:
   - study_d8/global-css
 
-version: '8.x-1.0-alpha1'
+dependencies:
+  - paragraphs
+  - entity_reference_revisions:entity_reference_revisions
+  - drupal:file
+  - 'drupal:system (>= 8.5)'
+
+version: '8.x-1.0-alpha2'
 core: '8.x'
 project: 'study_d8'
